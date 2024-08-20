@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:alpha="0.2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/android_logo" />
+
+    <ImageView
+        android:id="@+id/iv_google"
+        app:layout_constraintBaseline_toTopOf="parent"
+        android:src="@drawable/google_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:id="@+id/tv_details"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_google"
+        android:text="@string/google_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:textColor="@color/black"/>
+
+
+    <TextView
+        android:drawablePadding="16dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:id="@+id/tv_address"
+        android:textSize="32sp"
+        android:drawableStart="@drawable/baseline_location_city_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/google_address"/>
+
+    <TextView
+        android:drawablePadding="16dp"
+        android:textColor="@color/blue"
+        android:layout_marginTop="16dp"
+        android:drawableStart="@drawable/kwkb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_address"
+        android:text="@string/X"
+        android:textSize="32sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
